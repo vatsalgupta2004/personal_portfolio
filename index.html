@@ -954,6 +954,44 @@
             transition: width 0.3s ease;
         }
 
+        /* Theme Notification */
+        .theme-notification {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--card-bg), rgba(0, 255, 255, 0.1));
+            border: 2px solid var(--accent-color);
+            border-radius: 15px;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 1002;
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            color: var(--accent-color);
+            box-shadow: 0 8px 32px rgba(0, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            transform: translateX(400px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .theme-notification.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .theme-notification i {
+            font-size: 1.3rem;
+            animation: pulse 1s infinite;
+        }
+
+        .theme-notification span {
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .projects-grid {
@@ -2162,13 +2200,62 @@
         }
     };
 
-    // Theme toggle functionality
+    // Theme toggle functionality with 15+ themes
     let currentTheme = 0;
     const themes = [
-        { primary: '#00ffff', secondary: '#ff006e', tertiary: '#8338ec' },
-        { primary: '#00ff41', secondary: '#ff3333', tertiary: '#ffaa00' },
-        { primary: '#ff9500', secondary: '#00d4ff', tertiary: '#ff2d92' },
-        { primary: '#a855f7', secondary: '#06b6d4', tertiary: '#10b981' }
+        // Original Futuristic Cyan-Pink
+        { name: 'Cyberpunk Neon', primary: '#00ffff', secondary: '#ff006e', tertiary: '#8338ec' },
+        
+        // Matrix Green
+        { name: 'Matrix Code', primary: '#00ff41', secondary: '#00cc33', tertiary: '#39ff14' },
+        
+        // 90s Retro
+        { name: '90s Retro', primary: '#ff10f0', secondary: '#ffff00', tertiary: '#00ffff' },
+        
+        // Sunset Vibes
+        { name: 'Sunset Glow', primary: '#ff6b35', secondary: '#f7931e', tertiary: '#ffd23f' },
+        
+        // Ocean Deep
+        { name: 'Ocean Deep', primary: '#0077be', secondary: '#00c9ff', tertiary: '#0affff' },
+        
+        // Purple Haze
+        { name: 'Purple Haze', primary: '#a855f7', secondary: '#d946ef', tertiary: '#ec4899' },
+        
+        // Toxic Waste
+        { name: 'Toxic Green', primary: '#39ff14', secondary: '#ccff00', tertiary: '#00ff00' },
+        
+        // Fire & Ice
+        { name: 'Fire & Ice', primary: '#ff3333', secondary: '#00d4ff', tertiary: '#ff9500' },
+        
+        // Vaporwave
+        { name: 'Vaporwave', primary: '#ff71ce', secondary: '#01cdfe', tertiary: '#b967ff' },
+        
+        // Midnight Blue
+        { name: 'Midnight Blue', primary: '#4169e1', secondary: '#1e90ff', tertiary: '#00bfff' },
+        
+        // Emerald Forest
+        { name: 'Emerald Forest', primary: '#10b981', secondary: '#34d399', tertiary: '#6ee7b7' },
+        
+        // Blood Moon
+        { name: 'Blood Moon', primary: '#dc2626', secondary: '#f87171', tertiary: '#fca5a5' },
+        
+        // Golden Hour
+        { name: 'Golden Hour', primary: '#fbbf24', secondary: '#f59e0b', tertiary: '#d97706' },
+        
+        // Neon Pink
+        { name: 'Neon Pink', primary: '#ff2d92', secondary: '#ff1cf7', tertiary: '#ff69eb' },
+        
+        // Arctic Frost
+        { name: 'Arctic Frost', primary: '#67e8f9', secondary: '#22d3ee', tertiary: '#06b6d4' },
+        
+        // Lava Flow
+        { name: 'Lava Flow', primary: '#ff4500', secondary: '#ff6347', tertiary: '#ff7f50' },
+        
+        // Electric Purple
+        { name: 'Electric Purple', primary: '#8b5cf6', secondary: '#a78bfa', tertiary: '#c4b5fd' },
+        
+        // Lime Punch
+        { name: 'Lime Punch', primary: '#84cc16', secondary: '#a3e635', tertiary: '#bef264' }
     ];
 
     function toggleTheme() {
@@ -2179,6 +2266,36 @@
         document.documentElement.style.setProperty('--accent-secondary', theme.secondary);
         document.documentElement.style.setProperty('--accent-tertiary', theme.tertiary);
         document.documentElement.style.setProperty('--glow-color', theme.primary);
+
+        // Show theme name notification
+        showThemeNotification(theme.name);
+    }
+
+    // Theme notification
+    function showThemeNotification(themeName) {
+        // Remove existing notification if any
+        const existingNotif = document.querySelector('.theme-notification');
+        if (existingNotif) {
+            existingNotif.remove();
+        }
+
+        // Create notification
+        const notification = document.createElement('div');
+        notification.className = 'theme-notification';
+        notification.innerHTML = `
+            <i class="fas fa-palette"></i>
+            <span>${themeName}</span>
+        `;
+        document.body.appendChild(notification);
+
+        // Animate in
+        setTimeout(() => notification.classList.add('show'), 10);
+
+        // Remove after 2 seconds
+        setTimeout(() => {
+            notification.classList.remove('show');
+            setTimeout(() => notification.remove(), 300);
+        }, 2000);
     }
 
     // Matrix rain effect (simplified)
@@ -2287,17 +2404,24 @@
 
     // Console easter egg
     console.log(`
-        ╭─────────────────────────────────────────────────────╮
-        │  🚀 Welcome to Vatsal Gupta's Futuristic Portfolio! │
-        │                                                     │
-        │  Try these keyboard shortcuts:                      │
-        │  • Ctrl/Cmd + 1: About Section                     │
-        │  • Ctrl/Cmd + 2: Projects Section                  │
-        │  • Ctrl/Cmd + 3: Skills Section                    │
-        │  • Ctrl/Cmd + T: Toggle Theme                      │
-        │                                                     │
-        │  Built with ❤️ and lots of ☕                       │
-        ╰─────────────────────────────────────────────────────╯
+        ╭───────────────────────────────────────────────────────╮
+        │  🚀 Welcome to Vatsal Gupta's Futuristic Portfolio!   │
+        │                                                       │
+        │  Try these keyboard shortcuts:                        │
+        │  • Ctrl/Cmd + 1: About Section                       │
+        │  • Ctrl/Cmd + 2: Projects Section                    │
+        │  • Ctrl/Cmd + 3: Skills Section                      │
+        │  • Ctrl/Cmd + T: Cycle Through 18 Themes!           │
+        │                                                       │
+        │  🎨 Available Themes:                                 │
+        │  Cyberpunk, Matrix, 90s Retro, Sunset, Ocean,       │
+        │  Purple Haze, Toxic Green, Fire & Ice, Vaporwave,   │
+        │  Midnight Blue, Emerald, Blood Moon, Golden Hour,   │
+        │  Neon Pink, Arctic Frost, Lava Flow, Electric       │
+        │  Purple, Lime Punch                                  │
+        │                                                       │
+        │  Built with ❤️ and lots of ☕                         │
+        ╰───────────────────────────────────────────────────────╯
         `);
 </script>
 </body>
