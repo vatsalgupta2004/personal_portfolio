@@ -237,6 +237,36 @@
             width: 20px;
         }
 
+        /* Download Resume Button */
+        .download-resume-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+            color: var(--primary-bg);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .download-resume-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0, 255, 255, 0.5);
+            background: linear-gradient(135deg, var(--accent-secondary), var(--accent-color));
+        }
+
+        .download-resume-btn i {
+            font-size: 1.1rem;
+        }
+
         /* Navigation */
         .nav {
             display: flex;
@@ -952,6 +982,11 @@
                 font-size: 2.2rem;
             }
 
+            .download-resume-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
             .contact-grid {
                 grid-template-columns: 1fr;
             }
@@ -1063,7 +1098,7 @@
     <header class="header">
         <div class="profile-section">
             <div class="profile-img">
-                <i class="fas fa-code"></i>
+                <img src="vatsal.jpg" alt="Vatsal Gupta" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
             </div>
             <div class="profile-info">
                 <h1 class="typing-text">VATSAL GUPTA</h1>
@@ -1075,6 +1110,9 @@
                 <p style="color: var(--text-secondary); margin-bottom: 20px;">
                     Driven by curiosity and code, I specialize in building fault-tolerant systems, AI-powered applications, and cutting-edge research solutions.
                 </p>
+                <a href="Resume_Vatsal_Gupta_2025_end.pdf" download class="download-resume-btn">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
             </div>
         </div>
 
