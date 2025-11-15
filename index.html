@@ -880,6 +880,41 @@
             box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
         }
 
+        /* Style Theme Toggle */
+        .style-toggle {
+            position: fixed;
+            top: 90px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--accent-secondary), var(--accent-tertiary));
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            color: var(--primary-bg);
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(255, 0, 110, 0.3);
+        }
+
+        .style-toggle:hover {
+            transform: scale(1.1) rotate(180deg);
+            box-shadow: 0 6px 25px rgba(255, 0, 110, 0.6);
+        }
+
+        .style-toggle i {
+            animation: magicPulse 2s infinite;
+        }
+
+        @keyframes magicPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
         /* Loading Screen */
         .loading-screen {
             position: fixed;
@@ -1109,6 +1144,188 @@
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(180deg, var(--accent-secondary), var(--accent-tertiary));
         }
+
+        /* ========================================
+           COMPLETE STYLE THEMES
+           ======================================== */
+
+        /* Theme 1: Futuristic (Default) - Already applied */
+        body.theme-futuristic {
+            /* Already set as default */
+        }
+
+        /* Theme 2: Minimal Clean */
+        body.theme-minimal {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body.theme-minimal .card,
+        body.theme-minimal .project-card,
+        body.theme-minimal .header {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            color: #111827;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        body.theme-minimal {
+            background: #f9fafb;
+            color: #111827;
+        }
+
+        body.theme-minimal .section-title,
+        body.theme-minimal h1, body.theme-minimal h2, body.theme-minimal h3 {
+            color: #111827;
+            font-weight: 700;
+        }
+
+        body.theme-minimal .nav-btn {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            color: #111827;
+        }
+
+        body.theme-minimal .nav-btn:hover,
+        body.theme-minimal .nav-btn.active {
+            background: #111827;
+            color: #ffffff;
+        }
+
+        /* Theme 3: Classic Elegant */
+        body.theme-classic {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: #f5f1e8;
+        }
+
+        body.theme-classic .card,
+        body.theme-classic .project-card,
+        body.theme-classic .header {
+            background: #ffffff;
+            border: 2px solid #8b7355;
+            border-radius: 0;
+            box-shadow: 0 4px 6px rgba(139, 115, 85, 0.2);
+        }
+
+        body.theme-classic .section-title {
+            font-family: 'Georgia', serif;
+            color: #5d4e37;
+            border-bottom: 3px double #8b7355;
+            padding-bottom: 15px;
+        }
+
+        body.theme-classic .nav-btn {
+            background: #8b7355;
+            color: #f5f1e8;
+            border-radius: 0;
+            border: 2px solid #5d4e37;
+        }
+
+        body.theme-classic .nav-btn:hover,
+        body.theme-classic .nav-btn.active {
+            background: #5d4e37;
+        }
+
+        /* Theme 4: Brutalist Bold */
+        body.theme-brutalist {
+            font-family: 'Arial Black', Arial, sans-serif;
+            background: #ffff00;
+        }
+
+        body.theme-brutalist .card,
+        body.theme-brutalist .project-card,
+        body.theme-brutalist .header {
+            background: #ffffff;
+            border: 4px solid #000000;
+            border-radius: 0;
+            box-shadow: 8px 8px 0 #000000;
+        }
+
+        body.theme-brutalist .section-title {
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border: 4px solid #000000;
+            padding: 15px;
+            background: #ff0000;
+            color: #ffffff;
+        }
+
+        body.theme-brutalist .nav-btn {
+            background: #000000;
+            color: #ffff00;
+            border-radius: 0;
+            border: 3px solid #000000;
+            font-weight: 900;
+        }
+
+        body.theme-brutalist .nav-btn:hover {
+            background: #ff0000;
+            color: #ffffff;
+        }
+
+        /* Theme 5: Glassmorphism */
+        body.theme-glassmorphism {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body.theme-glassmorphism .card,
+        body.theme-glassmorphism .project-card,
+        body.theme-glassmorphism .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        }
+
+        body.theme-glassmorphism .section-title,
+        body.theme-glassmorphism h1, body.theme-glassmorphism h2, body.theme-glassmorphism h3 {
+            color: #ffffff;
+        }
+
+        body.theme-glassmorphism .nav-btn {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+        }
+
+        body.theme-glassmorphism .nav-btn:hover,
+        body.theme-glassmorphism .nav-btn.active {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Theme 6: Neumorphism Soft */
+        body.theme-neumorphism {
+            background: #e0e5ec;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body.theme-neumorphism .card,
+        body.theme-neumorphism .project-card,
+        body.theme-neumorphism .header {
+            background: #e0e5ec;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 9px 9px 16px rgba(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5);
+        }
+
+        body.theme-neumorphism .section-title {
+            color: #2c3e50;
+        }
+
+        body.theme-neumorphism .nav-btn {
+            background: #e0e5ec;
+            border: none;
+            color: #2c3e50;
+            box-shadow: 4px 4px 8px rgba(163,177,198,0.6), -4px -4px 8px rgba(255,255,255, 0.5);
+        }
+
+        body.theme-neumorphism .nav-btn:hover,
+        body.theme-neumorphism .nav-btn.active {
+            box-shadow: inset 4px 4px 8px rgba(163,177,198,0.6), inset -4px -4px 8px rgba(255,255,255, 0.5);
+        }
     </style>
 </head>
 <body>
@@ -1129,6 +1346,11 @@
 <!-- Theme Toggle -->
 <div class="theme-toggle" onclick="toggleTheme()">
     <i class="fas fa-palette"></i>
+</div>
+
+<!-- Style Theme Toggle -->
+<div class="style-toggle" onclick="toggleStyleTheme()">
+    <i class="fas fa-magic"></i>
 </div>
 
 <div class="container">
@@ -2296,6 +2518,55 @@
             notification.classList.remove('show');
             setTimeout(() => notification.remove(), 300);
         }, 2000);
+    }
+
+    // Complete Style Theme Toggle
+    let currentStyleTheme = 0;
+    const styleThemes = [
+        'futuristic',
+        'minimal',
+        'classic',
+        'brutalist',
+        'glassmorphism',
+        'neumorphism'
+    ];
+
+    function toggleStyleTheme() {
+        currentStyleTheme = (currentStyleTheme + 1) % styleThemes.length;
+        const theme = styleThemes[currentStyleTheme];
+        
+        document.body.className = `theme-${theme}`;
+        showStyleThemeNotification(theme);
+    }
+
+    function showStyleThemeNotification(themeName) {
+        const existingNotif = document.querySelector('.theme-notification');
+        if (existingNotif) {
+            existingNotif.remove();
+        }
+
+        const themeNames = {
+            'futuristic': '🚀 Futuristic Cyberpunk',
+            'minimal': '✨ Minimal Clean',
+            'classic': '🎩 Classic Elegant',
+            'brutalist': '⚡ Brutalist Bold',
+            'glassmorphism': '💎 Glassmorphism',
+            'neumorphism': '🌟 Neumorphism Soft'
+        };
+
+        const notification = document.createElement('div');
+        notification.className = 'theme-notification';
+        notification.innerHTML = `
+            <i class="fas fa-magic"></i>
+            <span>${themeNames[themeName]}</span>
+        `;
+        document.body.appendChild(notification);
+
+        setTimeout(() => notification.classList.add('show'), 10);
+        setTimeout(() => {
+            notification.classList.remove('show');
+            setTimeout(() => notification.remove(), 300);
+        }, 2500);
     }
 
     // Matrix rain effect (simplified)
