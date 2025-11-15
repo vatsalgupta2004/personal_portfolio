@@ -658,6 +658,14 @@
             font-size: 0.85rem;
         }
 
+        /* Achievements Grid */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
         /* About Section */
         .about-content {
             background: var(--card-bg);
@@ -1109,6 +1117,7 @@
         <button class="nav-btn" onclick="showSection('certifications')">CERTIFICATIONS</button>
         <button class="nav-btn" onclick="showSection('patent')">PATENT</button>
         <button class="nav-btn" onclick="showSection('volunteering')">VOLUNTEERING</button>
+        <button class="nav-btn" onclick="showSection('achievements')">ACHIEVEMENTS</button>
     </nav>
 
     <!-- About Section -->
@@ -1163,6 +1172,87 @@
         <h2 class="section-title">EXPERIENCE</h2>
 
         <div class="timeline">
+            <div class="timeline-item">
+                <div class="card">
+                    <h3>Freelance Software Tester</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-bug"></i> uTest</span>
+                        <span><i class="fas fa-calendar"></i> Nov 2025 - Present</span>
+                        <span><i class="fas fa-globe"></i> Remote</span>
+                        <span class="badge">Quality Assurance</span>
+                    </div>
+                    <p>Performing manual and exploratory testing for global software products. Identifying bugs, documenting issues, and collaborating with international QA teams to ensure product quality and reliability.</p>
+                    <ul style="margin-top: 15px; padding-left: 20px; color: var(--text-secondary);">
+                        <li>Execute comprehensive manual testing across web and mobile platforms</li>
+                        <li>Perform exploratory testing to identify edge cases and usability issues</li>
+                        <li>Document bugs with detailed reproduction steps, screenshots, and severity levels</li>
+                        <li>Collaborate with global QA teams and provide actionable feedback</li>
+                        <li>Test across multiple devices, browsers, and operating systems</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Manual Testing</span>
+                        <span class="tech-tag">Exploratory Testing</span>
+                        <span class="tech-tag">Bug Reporting</span>
+                        <span class="tech-tag">QA</span>
+                        <span class="tech-tag">Cross-platform Testing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <h3>Competition Contributor</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-chart-line"></i> Kaggle</span>
+                        <span><i class="fas fa-calendar"></i> Oct 2025 - Present</span>
+                        <span><i class="fas fa-trophy"></i> Data Science Competitions</span>
+                        <span class="badge">Machine Learning</span>
+                    </div>
+                    <p>Actively participating in Kaggle competitions focusing on feature engineering, model building, validation strategies, and leaderboard submissions. Working on real-world datasets to improve ML expertise.</p>
+                    <ul style="margin-top: 15px; padding-left: 20px; color: var(--text-secondary);">
+                        <li>Feature engineering and data preprocessing for competition datasets</li>
+                        <li>Building and optimizing machine learning models for predictive tasks</li>
+                        <li>Implementing cross-validation strategies and model evaluation techniques</li>
+                        <li>Making strategic leaderboard submissions and analyzing results</li>
+                        <li>Learning from community kernels and collaborating with other data scientists</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Feature Engineering</span>
+                        <span class="tech-tag">Model Building</span>
+                        <span class="tech-tag">Cross-Validation</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="card">
+                    <h3>Freelance AI Contributor</h3>
+                    <div class="card-meta">
+                        <span><i class="fas fa-brain"></i> Outlier</span>
+                        <span><i class="fas fa-calendar"></i> Feb 2024 - Present</span>
+                        <span><i class="fas fa-robot"></i> AI/ML</span>
+                        <span class="badge">Remote</span>
+                    </div>
+                    <p>Contributing to AI model improvement through data annotation, labeling, and quality assurance for NLP, Computer Vision, and Generative AI projects. Ensuring high-quality training data for machine learning systems.</p>
+                    <ul style="margin-top: 15px; padding-left: 20px; color: var(--text-secondary);">
+                        <li>Data annotation and labeling for NLP and Computer Vision tasks</li>
+                        <li>Quality improvement and validation for AI training datasets</li>
+                        <li>Contributing to Generative AI model refinement and evaluation</li>
+                        <li>Prompt engineering and response quality assessment</li>
+                        <li>Ensuring data accuracy and consistency across various AI domains</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Data Annotation</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">Generative AI</span>
+                        <span class="tech-tag">Quality Assurance</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="timeline-item">
                 <div class="card">
                     <h3>Java Payment Gateway Intern</h3>
@@ -1380,8 +1470,8 @@
                 <div class="skill-tags">
                     <span class="skill-tag">Spring Boot</span>
                     <span class="skill-tag">Spring Batch</span>
-                    <span class="skill-tag">REST APIs</span>
-                    <span class="skill-tag">Data Processing</span>
+                    <span class="skill-tag">REST API Design</span>
+                    <span class="skill-tag">Fault-Tolerant Systems</span>
                     <span class="skill-tag">FastAPI</span>
                     <span class="skill-tag">Streamlit</span>
                     <span class="skill-tag">Microservices</span>
@@ -1391,35 +1481,41 @@
             <div class="skill-category">
                 <h4><i class="fas fa-brain"></i> AI/ML & Data Science</h4>
                 <div class="skill-tags">
+                    <span class="skill-tag">Retrieval Augmented Generation (RAG)</span>
+                    <span class="skill-tag">Large Language Models (LLaMA)</span>
                     <span class="skill-tag">Machine Learning</span>
                     <span class="skill-tag">Deep Learning</span>
                     <span class="skill-tag">NLP</span>
                     <span class="skill-tag">Computer Vision</span>
-                    <span class="skill-tag">RAG</span>
-                    <span class="skill-tag">LLMs</span>
                     <span class="skill-tag">Model Evaluation</span>
                     <span class="skill-tag">PyTorch</span>
                     <span class="skill-tag">Scikit-learn</span>
+                    <span class="skill-tag">Feature Engineering</span>
                 </div>
             </div>
 
             <div class="skill-category">
-                <h4><i class="fas fa-tools"></i> Frameworks & Libraries</h4>
+                <h4><i class="fas fa-tools"></i> AI/ML Frameworks & Libraries</h4>
                 <div class="skill-tags">
                     <span class="skill-tag">LangChain</span>
                     <span class="skill-tag">FAISS</span>
+                    <span class="skill-tag">llama.cpp</span>
+                    <span class="skill-tag">Sentence-Transformers</span>
                     <span class="skill-tag">OpenCV</span>
+                    <span class="skill-tag">Whisper</span>
+                    <span class="skill-tag">pdfplumber</span>
                     <span class="skill-tag">NumPy</span>
                     <span class="skill-tag">Pandas</span>
                     <span class="skill-tag">NLTK</span>
-                    <span class="skill-tag">Sentence-Transformers</span>
                     <span class="skill-tag">LIME</span>
+                    <span class="skill-tag">Weights & Biases</span>
                 </div>
             </div>
 
             <div class="skill-category">
-                <h4><i class="fas fa-cloud"></i> Cloud & DevOps</h4>
+                <h4><i class="fas fa-cloud"></i> Cloud Platforms</h4>
                 <div class="skill-tags">
+                    <span class="skill-tag">Oracle Cloud Infrastructure</span>
                     <span class="skill-tag">Google Cloud Platform</span>
                     <span class="skill-tag">Cloud Storage</span>
                     <span class="skill-tag">App Engine</span>
@@ -1431,10 +1527,11 @@
             </div>
 
             <div class="skill-category">
-                <h4><i class="fas fa-database"></i> Databases & Analytics</h4>
+                <h4><i class="fas fa-database"></i> Databases & Query Optimization</h4>
                 <div class="skill-tags">
-                    <span class="skill-tag">MySQL</span>
                     <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">Query Optimization</span>
+                    <span class="skill-tag">MySQL</span>
                     <span class="skill-tag">MongoDB</span>
                     <span class="skill-tag">Redis</span>
                     <span class="skill-tag">Elasticsearch</span>
@@ -1444,14 +1541,16 @@
             </div>
 
             <div class="skill-category">
-                <h4><i class="fas fa-shield-alt"></i> Security & Networking</h4>
+                <h4><i class="fas fa-shield-alt"></i> Security & Testing</h4>
                 <div class="skill-tags">
+                    <span class="skill-tag">Manual Testing</span>
+                    <span class="skill-tag">Exploratory Testing</span>
+                    <span class="skill-tag">Bug Reporting</span>
                     <span class="skill-tag">Cybersecurity</span>
                     <span class="skill-tag">Intrusion Detection</span>
                     <span class="skill-tag">Network Security</span>
                     <span class="skill-tag">CCNA</span>
                     <span class="skill-tag">Penetration Testing</span>
-                    <span class="skill-tag">Cryptography</span>
                 </div>
             </div>
 
@@ -1462,9 +1561,9 @@
                     <span class="skill-tag">VS Code</span>
                     <span class="skill-tag">IntelliJ IDEA</span>
                     <span class="skill-tag">Jupyter Notebook</span>
-                    <span class="skill-tag">Weights & Biases</span>
                     <span class="skill-tag">Postman</span>
                     <span class="skill-tag">LaTeX</span>
+                    <span class="skill-tag">Test-Driven Development</span>
                 </div>
             </div>
 
@@ -1543,6 +1642,62 @@
         <h2 class="section-title">CERTIFICATIONS</h2>
 
         <div class="cert-grid">
+            <!-- Oracle Cloud Certifications (2025-2027) -->
+            <div class="cert-item" style="border-left: 3px solid #F80000;">
+                <div class="cert-title">Oracle AI Vector Search Certified Professional</div>
+                <div class="cert-issuer">Oracle</div>
+                <div class="cert-date">2025 - 2027 | Valid</div>
+            </div>
+
+            <div class="cert-item" style="border-left: 3px solid #F80000;">
+                <div class="cert-title">Oracle Cloud Infrastructure 2025 Certified Data Science Professional</div>
+                <div class="cert-issuer">Oracle</div>
+                <div class="cert-date">2025 - 2027 | Valid</div>
+            </div>
+
+            <div class="cert-item" style="border-left: 3px solid #F80000;">
+                <div class="cert-title">Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</div>
+                <div class="cert-issuer">Oracle</div>
+                <div class="cert-date">2025 - 2027 | Valid</div>
+            </div>
+
+            <div class="cert-item" style="border-left: 3px solid #F80000;">
+                <div class="cert-title">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</div>
+                <div class="cert-issuer">Oracle</div>
+                <div class="cert-date">2025 - 2027 | Valid</div>
+            </div>
+
+            <!-- Academic & Professional Certifications -->
+            <div class="cert-item">
+                <div class="cert-title">PostgreSQL: Become an SQL Developer</div>
+                <div class="cert-issuer">Simplilearn</div>
+                <div class="cert-date">October 2025</div>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-title">Kaggle Community Competitor</div>
+                <div class="cert-issuer">Kaggle</div>
+                <div class="cert-date">October 2025</div>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-title">Machine Learning I</div>
+                <div class="cert-issuer">Columbia University (Columbia+)</div>
+                <div class="cert-date">September 2025</div>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-title">Unleashing the Power of AI Agents</div>
+                <div class="cert-issuer">IBM</div>
+                <div class="cert-date">September 2025</div>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-title">Nestlé E-learning 2025: Resilience</div>
+                <div class="cert-issuer">Nestlé</div>
+                <div class="cert-date">September 2025</div>
+            </div>
+
             <div class="cert-item">
                 <div class="cert-title">Deloitte Australia - Technology Job Simulation</div>
                 <div class="cert-issuer">Forage</div>
@@ -1553,6 +1708,12 @@
                 <div class="cert-title">Introduction to Generative AI</div>
                 <div class="cert-issuer">Simplilearn</div>
                 <div class="cert-date">August 2025 | ID: 8838124</div>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-title">Fundamentals of Deep Learning</div>
+                <div class="cert-issuer">NVIDIA</div>
+                <div class="cert-date">March 2025 | ID: 1tO0Ys3ITkGJkXM3sgBKrQ</div>
             </div>
 
             <div class="cert-item">
@@ -1568,12 +1729,6 @@
             </div>
 
             <div class="cert-item">
-                <div class="cert-title">Fundamentals of Deep Learning</div>
-                <div class="cert-issuer">NVIDIA</div>
-                <div class="cert-date">March 2025 | ID: 1tO0Ys3ITkGJkXM3sgBKrQ</div>
-            </div>
-
-            <div class="cert-item">
                 <div class="cert-title">CME - National Science Day 2025</div>
                 <div class="cert-issuer">Government Institute of Medical Sciences</div>
                 <div class="cert-date">February 2025</div>
@@ -1585,6 +1740,7 @@
                 <div class="cert-date">January 2025</div>
             </div>
 
+            <!-- Google Certifications -->
             <div class="cert-item">
                 <div class="cert-title">Google GenAI Study Jams</div>
                 <div class="cert-issuer">Google Developers Group</div>
@@ -1597,6 +1753,7 @@
                 <div class="cert-date">October 2024</div>
             </div>
 
+            <!-- NPTEL Certifications -->
             <div class="cert-item">
                 <div class="cert-title">Software Conceptual Design</div>
                 <div class="cert-issuer">NPTEL</div>
@@ -1661,7 +1818,7 @@
             <div class="cert-item">
                 <div class="cert-title">Multiple Google Cloud Infrastructure Certifications</div>
                 <div class="cert-issuer">Google Cloud Skills Boost</div>
-                <div class="cert-date">October 2024</div>
+                <div class="cert-date">2024-2025</div>
             </div>
         </div>
     </section>
@@ -1736,6 +1893,132 @@
                         <li>International collaboration across 169+ countries</li>
                         <li>Contribution to global wellness and mindfulness movement</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section">
+        <h2 class="section-title">ACHIEVEMENTS_&_AWARDS</h2>
+
+        <div class="achievements-grid">
+            <div class="card">
+                <h3><i class="fas fa-code-branch"></i> Hacktoberfest 2025: Open Source Developer</h3>
+                <div class="card-meta">
+                    <span><i class="fas fa-calendar"></i> October 2025</span>
+                    <span><i class="fas fa-globe"></i> Global Open Source</span>
+                    <span class="badge">Contributor</span>
+                </div>
+                <p>Successfully participated in Hacktoberfest 2025 as an active open source developer and algorithm contributor. Made significant contributions across multiple repositories focusing on AI, cybersecurity, frontend improvements, and documentation enhancements.</p>
+                <ul style="margin-top: 15px; padding-left: 20px; color: var(--text-secondary);">
+                    <li>Contributed to AI and machine learning open source projects</li>
+                    <li>Enhanced cybersecurity tools and frameworks with bug fixes and features</li>
+                    <li>Improved frontend components and user interfaces</li>
+                    <li>Created comprehensive documentation for developer communities</li>
+                    <li>Practiced test-driven development and collaborative workflows</li>
+                    <li>Engaged with global developer community through code reviews</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">Open Source</span>
+                    <span class="tech-tag">Git/GitHub</span>
+                    <span class="tech-tag">Code Review</span>
+                    <span class="tech-tag">TDD</span>
+                    <span class="tech-tag">Collaboration</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-tree"></i> Tree-Nation: Environmental Contributor</h3>
+                <div class="card-meta">
+                    <span><i class="fas fa-calendar"></i> October 2025</span>
+                    <span><i class="fas fa-leaf"></i> Sustainability</span>
+                    <span class="badge">Eco-Warrior</span>
+                </div>
+                <p>Contributed to environmental sustainability through Tree-Nation by planting trees as part of Hacktoberfest participation. Actively working to offset carbon emissions and contribute to global reforestation efforts.</p>
+                <ul style="margin-top: 15px; padding-left: 20px; color: var(--text-secondary);">
+                    <li>Planted trees to offset carbon footprint from technology usage</li>
+                    <li>Contributed to global reforestation and climate action initiatives</li>
+                    <li>Combined technology contributions with environmental responsibility</li>
+                    <li>Participated in sustainable development goals through direct action</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">Sustainability</span>
+                    <span class="tech-tag">Climate Action</span>
+                    <span class="tech-tag">Carbon Offset</span>
+                    <span class="tech-tag">Environmental Impact</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-trophy"></i> 2nd Place - GDG Amity Kaggle Competition</h3>
+                <div class="card-meta">
+                    <span><i class="fas fa-calendar"></i> October 2025</span>
+                    <span><i class="fas fa-university"></i> Google Developer Groups - Amity</span>
+                    <span class="badge">Runner-Up</span>
+                </div>
+                <p>Secured 2nd position in the Google Developer Groups Amity Kaggle Spaceship Titanic Machine Learning Challenge. Competed against fellow data science enthusiasts, implementing advanced feature engineering and ensemble modeling techniques.</p>
+                <ul style="margin-top: 15px; padding-left: 20px; color: var(--text-secondary);">
+                    <li>Built predictive models for passenger transportation classification</li>
+                    <li>Implemented advanced feature engineering and data preprocessing</li>
+                    <li>Applied ensemble learning techniques for improved accuracy</li>
+                    <li>Competed in live leaderboard competition environment</li>
+                    <li>Demonstrated strong problem-solving and analytical skills</li>
+                </ul>
+                <div class="project-tech">
+                    <span class="tech-tag">Kaggle</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Feature Engineering</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Competition</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-globe"></i> Confluence 2025 - Hospitality Excellence</h3>
+                <div class="card-meta">
+                    <span><i class="fas fa-calendar"></i> February 2025</span>
+                    <span><i class="fas fa-users"></i> International Conference</span>
+                    <span class="badge">Volunteer</span>
+                </div>
+                <p>Recognized for outstanding hospitality and coordination efforts at Confluence 2025, the 15th International Conference on Cloud Computing, Data Science & Engineering. Managed logistics and guest coordination for participants from 20+ countries.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Event Management</span>
+                    <span class="tech-tag">International Relations</span>
+                    <span class="tech-tag">Logistics</span>
+                    <span class="tech-tag">Leadership</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-certificate"></i> Internship Excellence Certificate</h3>
+                <div class="card-meta">
+                    <span><i class="fas fa-calendar"></i> March 2025</span>
+                    <span><i class="fas fa-heart"></i> Prashraya Welfare Foundation</span>
+                    <span class="badge">Recognition</span>
+                </div>
+                <p>Awarded Internship Excellence Certificate for successful completion of 60-hour intensive internship program focused on community outreach, social welfare initiatives, and grassroots development work.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Social Welfare</span>
+                    <span class="tech-tag">Community Service</span>
+                    <span class="tech-tag">NGO Work</span>
+                    <span class="tech-tag">Documentation</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-star"></i> Outlier AI Contributor Recognition</h3>
+                <div class="card-meta">
+                    <span><i class="fas fa-calendar"></i> 2024 - Present</span>
+                    <span><i class="fas fa-brain"></i> Outlier AI</span>
+                    <span class="badge">Active Contributor</span>
+                </div>
+                <p>Recognized for consistent high-quality contributions to AI model improvement through data annotation, labeling, and prompt engineering across NLP, Computer Vision, and Generative AI projects.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">AI Training</span>
+                    <span class="tech-tag">Quality Assurance</span>
+                    <span class="tech-tag">Prompt Engineering</span>
+                    <span class="tech-tag">Data Annotation</span>
                 </div>
             </div>
         </div>
